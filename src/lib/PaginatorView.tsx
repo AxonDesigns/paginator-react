@@ -35,7 +35,13 @@ export function PaginatorView(props: PaginatorViewProps) {
 
   const { hostRef, paginator, result } = usePaginator(doc, { paginator: paginatorProp, fonts });
   const zoom = useZoom(paginator, hostRef, zoomOptions);
-  const { controller } = useInteractions(paginator, result, hostRef, interactionOptions);
+  // Defaults hit-testing to this view's own live zoom factor — attachInteractions divides pointer
+  // coordinates by it to recover unscaled page-content px, so this must track the actual applied
+  // CSS scale or clicks drift out of alignment with what's on screen as soon as you zoom.
+  const { controller } = useInteractions(paginator, result, hostRef, {
+    zoom: zoom.getZoom,
+    ...interactionOptions,
+  });
 
   useEffect(() => {
     if (result) onPaginated?.(result);

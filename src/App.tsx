@@ -13,7 +13,10 @@ export default function App() {
   const { hostRef, paginator, result, status, error } = usePaginator(sampleDocument);
   const zoom = useZoom(paginator, hostRef, { min: 0.5, max: 2, step: 0.25, initial: 1 });
   const { exportPdf, exportDocx, exportXlsx, isExporting } = usePaginatorExport(paginator, sampleDocument, result);
-  const { controller } = useInteractions(paginator, result, hostRef);
+  // `zoom.getZoom` is a stable ref-backed getter (not the `zoom.zoom` state value) — attachInteractions
+  // reads it on every pointer event to convert screen px back to unscaled page-content px, so it needs
+  // to stay accurate as the user zooms in/out, not just reflect whatever zoom was active on first attach.
+  const { controller } = useInteractions(paginator, result, hostRef, { zoom: zoom.getZoom });
   const [selected, setSelected] = useState<Product | null>(null);
 
   useEffect(() => {

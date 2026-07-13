@@ -278,7 +278,7 @@
 
     "once": ["once@1.4.0", "", { "dependencies": { "wrappy": "1" } }, "sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w=="],
 
-    "paginator": ["paginator@github:AxonDesigns/paginator#3da93b7", { "dependencies": { "@chenglou/pretext": "^0.0.8", "@types/pdfkit": "^0.17.6", "buffer": "^6.0.3", "docx": "^9.7.1", "exceljs": "^4.4.0", "pdfkit": "^0.19.1", "svg-to-pdfkit": "^0.1.8" } }, "AxonDesigns-paginator-3da93b7", "sha512-puAIQP2ddxvwa8HQ0/eKGZDX3bT56GPdIg5/42rizxJevd5gMZrAeXR8J9JyovytJMoTTvA8FP3GKBI3/vLg9g=="],
+    "paginator": ["paginator@github:AxonDesigns/paginator#4a7d253", { "dependencies": { "@chenglou/pretext": "^0.0.8", "@types/pdfkit": "^0.17.6", "buffer": "^6.0.3", "docx": "^9.7.1", "exceljs": "^4.4.0", "pdfkit": "^0.19.1", "svg-to-pdfkit": "^0.1.8" } }, "AxonDesigns-paginator-4a7d253", "sha512-gXBU57HdeePV090wDmj+VJOIYrDnUmmPIW28S10WkajJaM9ZaY9UPbyfHLWUfdyqmVNovL++9kUFrBLEZSe01g=="],
 
     "pako": ["pako@1.0.11", "", {}, "sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw=="],
 
